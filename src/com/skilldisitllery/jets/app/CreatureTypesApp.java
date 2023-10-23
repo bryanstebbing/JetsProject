@@ -86,8 +86,6 @@ public class CreatureTypesApp {
 				System.out.println("One does not simply choose incorrectly.");
 			}
 		} while (instrcutorsChoice != 9);
-
-//		runApplication(pelennorFields);
 	}
 
 	private void runApplication(Airfield pelennorFields) {
@@ -129,12 +127,13 @@ public class CreatureTypesApp {
 		} else {
 
 			for (CreatureTypes c : creature) {
-		        System.out.println("Creature Type: " + c.getCreatureTypes());
-	            System.out.println("Speed: " + c.getSpeed() + " MPH");
-	            System.out.println("Range: " + c.getRange() + " miles");
-	            System.out.println("Price: $" + c.getPrice());
-	            System.out.println();
 				c.fly();
+				System.out.println("Creature Type: " + c.getCreatureTypes());
+				System.out.println("Speed: " + c.getSpeed() + " MPH");
+				System.out.println("Range: " + c.getRange() + " miles");
+				System.out.println("Price: $" + c.getPrice());
+				System.out.println("Distance traveled before refuel: " + c.getSpeed() / c.getRange());
+				System.out.println();
 			}
 		}
 	}
@@ -170,13 +169,13 @@ public class CreatureTypesApp {
 
 	}
 
-	// load the dwarfs onto the eagles
+	// load all the carriers
 	public void saveMeGwaihir() {
 		Carriers carriers = new Carriers();
 		carriers.saveMeGwaihir();
 	}
 
-	// have all the creatures fight
+	// have the creatures fight
 	public void atDawnLookToTheEast() {
 		Fighters fighters = new Fighters();
 		fighters.atDawnLookToTheEast();
@@ -186,10 +185,10 @@ public class CreatureTypesApp {
 	public void butAllOfThemWereBetrayed() {
 		for (int i = 0; i < creature.size(); i++)
 
-			System.out.println("Please tell us what Type of Creature you want to create.");
+		System.out.println("Please tell us what Type of Creature you want to create.\n");
 		String type = sc.nextLine();
 
-		System.out.println("Please tell us how fast this creature moves in MPH.");
+		System.out.println("Please tell us how fast this creature moves in MPH.\n");
 		int speed = sc.nextInt();
 
 		System.out.println("How far can this creature fly?\n");
@@ -200,8 +199,8 @@ public class CreatureTypesApp {
 
 		sc.nextLine();
 
-//			CreatureTypes wingedBeast = new CreatureTypes(type, speed, range, price);
-//			creature[i] = wingedBeast;
+		CreatureTypes creature = new CreatureTypes(type, speed, range, price);
+		creature[i] = creature;
 
 	}
 
