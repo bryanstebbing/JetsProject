@@ -1,3 +1,4 @@
-Eagles, 100, 10, 100000
-Dragon, 200, 500, 750000
-FellBeasts, 727, 750, 243000
+Eagle, Carrier, 100, 1000000, 100000
+Dragon, Fighter, 200, 5000, 750000
+FellBeast, FellBeast, 7270, 75000, 243000
+beast, Carrier, 140, 10067, 1
